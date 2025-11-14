@@ -25,11 +25,34 @@ web3-voting-system/
 
 ## 🏃‍♂️ Quick Start
 ```bash
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+- Git
+
+### Installation
+```bash
+# Clone repository
+git clone https://github.com/[your-username]/web3-voting-system.git
+cd web3-voting-system
+
 # Install dependencies
 npm install
 
-# Run tests
+# Compile contracts
+npx hardhat compile
+
+Testing
+# Run all tests
 npx hardhat test
 
+# Run specific voting tests
+npx hardhat test test/Voting.test.js
+
+Deployment
 # Deploy to local network
-npx hardhat run scripts/deploy.js
+npx hardhat run scripts/deploy.js --network localhost
+
+# Deploy to testnet (configure .env first)
+npx hardhat run scripts/deploy.js --network sepolia
